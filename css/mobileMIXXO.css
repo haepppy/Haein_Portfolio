@@ -108,26 +108,26 @@ div.pc {
     display: block;
 }
 
-.mainBanner {
+.swiper-container {
     width: 100vw; height: 111vw;
     overflow: hidden;
     position: relative;
     margin-top: 60px;
 }
-.banner {
+.swiper-wrapper {
     width: 300vw;
     position: relative;
 }
-.banner .bannerImg {
+.swiper-wrapper .swiper-slide {
     width: 100vw;
     position: relative;
     float: left;
 }
-.bannerImg a {
+.swiper-slide a {
     width: 100%;
     display: block;
 }
-.bannerImg a img {
+.swiper-slide a img {
     width: 100%;
     display: block;
 }
@@ -139,39 +139,39 @@ div.pc {
     bottom: 50px; left: 50%;
     transform: translateX(-50%);
 }
-.bannerItem > .arrowLeft {
+.swiper-button-prev {
     display: none;
     position: absolute;
     left: 0;
 }
 
-.bannerItem > .arrowRight {
+.swiper-button-next {
     display: none;
     position: absolute;
     right: 0;
 }
-.arrowLeft > img, .arrowRight > img {
+.swiper-button-prev > img, .swiper-button-next > img {
     display: block;
     height: 50px;
     cursor: pointer;
 }
-.pointer {
+div.pointer {
     line-height: 50px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    bottom: 50px;
 }
-.pointer > li {
+span.swiper-pagination-bullet {
     width: 8px; height: 8px;
     border-radius: 10px;
     background: #fff;
     opacity: 0.5;
+    margin: 0 15px;
     display: inline-block;
-    margin-right: 30px;
     cursor: pointer;
 }
 
-.pointer > li.onPointer {
+span.swiper-pagination-bullet-active {
     background: #fff;
     opacity: 1;
 }

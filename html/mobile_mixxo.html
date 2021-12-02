@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/jquery-3.6.0.min.js"></script>
+    <script src="../Swiper-3.4.2/dist/js/swiper.min.js"></script>
     <script src="../script/mobileMIXXO.js"></script>
     <link rel="stylesheet" href="../css/mobileMIXXO.css">
+    <link rel="stylesheet" href="../Swiper-3.4.2/dist/css/swiper.min.css">
     <title>mixxo mobile</title>
 </head>
 <body>
@@ -43,37 +45,37 @@
                 </div>
             </div>
         </header>
-        <div class="mainBanner">
-            <div class="banner">
-                <div class="bannerImg">
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <a href="#">
                         <img src="../images/mixxo/mobile banner 768.jpg" alt="배너이미지">
                     </a>
                 </div>
-                <div class="bannerImg">
+                <div class="swiper-slide">
                     <a href="#">
                         <img src="../images/mixxo/mobile basic banner 768.jpg" alt="배너이미지">
                     </a>
                 </div>
-                <div class="bannerImg">
+                <div class="swiper-slide">
                     <a href="#">
                         <img src="../images/mixxo/mobile third banner 768.jpg" alt="배너이미지">
                     </a>
                 </div>
             </div>
-            <div class="bannerItem">
-                <div class="arrowLeft">
+            
+                <div class="swiper-button-prev">
                     <img src="../images/mixxo/arrowIconLeft.png" alt="">
                 </div>
-                <ul class="pointer">
-                    <li class="onPointer"></li>
-                    <li></li>
-                    <li class="last"></li>
-                </ul>
-                <div class="arrowRight">
-                    <img src="../images/mixxo/arrowIconRight.png" alt="">
+                <div class="pointer swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class=" last swiper-pagination-bullet"></span>
                 </div>
-            </div>
+            <div class="swiper-button-next">
+                <img src="../images/mixxo/arrowIconRight.png" alt="">
+             </div>
+            
         </div>
         <div class="container newItems">
             <div class="itemTitle">
@@ -401,5 +403,19 @@
 
 
     </div>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false,
+            loop: true
+        });
+    </script>
 </body>
 </html>
