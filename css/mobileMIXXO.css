@@ -1,0 +1,355 @@
+*{
+   margin: 0; padding: 0; color: #252525;
+   box-sizing: border-box; font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+a.pc {
+    color: #e87f24;
+}
+span.pc {
+    color: #e87f24;
+}
+div.pc {
+    background: #e87f24;
+}
+
+.verCenter {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.horCenter {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.last:last-child {
+    margin: 0;
+}
+
+
+#wrap {
+    width: 100%;
+}
+
+.header {
+    width: 100%; height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 15;
+    background: #fff;
+}
+/* 헤더 높이 만큼 mainBanner margin-top 값 수정 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+        padding: 0 24px;
+    }
+}
+
+.headerGrid {
+    width: 100%; height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .headerGrid {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+    }
+}
+
+.leftIconBox {
+    height: 60px;
+    text-align: left;
+    line-height: 57px;
+}
+.rightIconBox {
+    height: 60px;
+    text-align: right;
+    line-height: 57px;
+    
+}
+.iconArea {
+    width: 32px; height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon {
+    width: 32px; height: 32px;
+}
+.icon img {
+    display: block;
+    width: 24px; height: 24px;
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logoArea {
+    height: 60px;
+    grid-column: span 2;
+    text-align: center;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .logoArea {
+        grid-column: span 6;
+    }
+}
+
+.logo {
+    height: 60px;
+    padding: 16px 0;
+    display: inline-block;
+}
+.logo img {
+    height: 100%;
+    display: block;
+}
+
+.mainBanner {
+    width: 100vw; height: 111vw;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px;
+}
+.banner {
+    width: 300vw;
+    position: relative;
+}
+.banner .bannerImg {
+    width: 100vw;
+    position: relative;
+    float: left;
+}
+.bannerImg a {
+    width: 100%;
+    display: block;
+}
+.bannerImg a img {
+    width: 100%;
+    display: block;
+}
+
+.bannerItem {
+    width: 100%; height: 50px;
+    z-index: 10;
+    position: absolute;
+    bottom: 50px; left: 50%;
+    transform: translateX(-50%);
+}
+.bannerItem > .arrowLeft {
+    display: none;
+    position: absolute;
+    left: 0;
+}
+
+.bannerItem > .arrowRight {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.arrowLeft > img, .arrowRight > img {
+    display: block;
+    height: 50px;
+    cursor: pointer;
+}
+.pointer {
+    line-height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pointer > li {
+    width: 8px; height: 8px;
+    border-radius: 10px;
+    background: #fff;
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.pointer > li.onPointer {
+    background: #fff;
+    opacity: 1;
+}
+
+
+.container {
+    width: 100%;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        padding: 0 24px;
+    }
+}
+.itemTitle {
+    grid-column: span 4;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .itemTitle {
+        grid-column: span 8;
+    }
+}
+.itemTitle h5 {
+    font-size: 20px;
+    font-weight: normal;
+}
+.item {
+    margin-bottom: 16px;
+    grid-column: span 2;
+}
+.thunmnail {
+    width: 100%;
+    position: relative;
+}
+.itemPhoto img {
+    width: 100%;
+    display: block;
+}
+span.wishIcon {
+    position: absolute;
+    bottom: 0; right: 0;
+}
+
+.wishOff {
+    display: block;
+}
+.wishOn {
+    display: none;
+}
+
+.prodTextArea {
+    width: 100%;
+    margin-top: 6px;
+}
+.prodTextArea a {
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+a.modelNum {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 2px;
+}
+a.prodName {
+
+}
+a.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+span.priceInfo {
+}
+.beforePri {
+    font-size: 12px;
+    color: #999;
+    text-decoration-line: line-through;
+    margin-left: 4px;
+    font-weight: normal;
+}
+.salePri {
+    margin-left: 4px;
+}
+.reviewCount {
+    display: none;
+}
+
+.moreBtn {
+    height: 32px;
+    grid-column: 2/4;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .moreBtn {
+        grid-column: 4/6;
+    }
+}
+.moreBtn > p {
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.lineBanner {
+    width: 100%; height: 100px;
+    background: coral;
+}
+
+.horScrollLIst {
+    width: 100%;
+}
+
+.listTitle {
+    width: 100%;
+    padding: 50px 20px 12px;
+    text-align: left;
+}
+.listTitle h5 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.horScrollLIst .scrollList {
+    width: 100%;
+    overflow-x: scroll;
+}
+.horScrollLIst .scrollList .itemList {
+    width: fit-content;
+    display: flex;
+    gap: 12px;
+    padding: 0 20px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .horScrollLIst .scrollList .itemList {
+        gap: 16px;
+        padding: 0 24px;
+    }
+}
+.itemList .item {
+    width: 120px
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .itemList .item {
+        width: 150px;
+    }
+}
+.itemList .prodTextArea a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.itemList .prodTextArea .beforePri {
+    margin: 0;
+}
+
+
+
+.itemPhoto > a > p, span.eventIcon {
+    display: none;
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}

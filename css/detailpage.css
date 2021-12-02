@@ -1,0 +1,395 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #252525;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+#wrap {
+    width: 100%
+}
+.cont {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
+}
+.header {
+    width: 100%; height: 50px;
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+}
+.header > h2 {
+    color: #fff;
+    font-size: 14px;
+    line-height: 49px;
+}
+.section1 {
+    padding-bottom: 50px;
+}
+.mainLogo {
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+}
+.mainLogo > img {
+    width: 305px;
+    display: inline-block;
+}
+.mainLogo2 {
+    display: inline-block;
+    margin: 50px 60px;
+    margin-top: 0;
+}
+.mainLogo2 > img{
+    width: 15vw;
+}
+.mainLogo2 > p {
+    margin-top: 20px;
+}
+.mainLogo > p {
+    margin-top: 20px;
+}
+
+.takeFive {
+    display: inline-block;
+    margin: 50px 25px;
+    
+}
+.takeFive > img {
+    width: 305px;
+    display: block;
+}
+.takeFive > p {
+    margin-top: 20px;
+}
+
+.firstPart {
+    display: inline-block;
+    margin-left: 0;
+    margin: 50px 0;
+}
+.firstPart > img {
+    display: inline-block;
+}
+.firstPart > p {
+    display: inline-block;
+    margin-left: 20px;
+}
+.part {
+    display: inline-block;
+    margin: 50px 0;
+    margin-left: 50px;
+}
+.part > img {
+    display: inline-block;
+}
+.part > p {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.detail1 {
+    width: 100%;
+    padding: 100px 0;
+    border-top: solid #999 1px;
+    position: relative;
+}
+.detail2 {
+    width: 100%;
+    padding: 100px 0;
+    padding-bottom: 10px;
+    border-top: solid #999 1px;
+    position: relative;
+}
+.detail2 > h3 {
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 6px;
+}
+.detail1 > h3 {
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 6px;
+}
+.detail1 > img {
+    width: 362px;
+}
+
+.detail1 > img.spacImg1 {
+    width: 65vw;
+}
+.detail1 > img.spacImg2 {
+    width: 2vw;
+    display: block;
+    margin: 50px auto;
+}
+.detail1 > img.spacImg3 {
+    width: 10vw;
+}
+
+.belleDetailBox {
+    width: 100%;
+    position: relative;
+    top: -40px;
+}
+.belleDetail {
+    display: block;
+    width: 100%; height: 130px;
+    position: relative;
+}
+.bImgBox {
+    display: inline-block;
+    width: 20%; height: 100%;
+    text-align: center;
+    position: relative;
+    
+}
+.bImgBox > img {
+    width: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bTextBox {
+    display: inline-block;
+    width: 32%; height: 100%;  
+    text-align: left;
+    position: relative;
+}
+.bTextBox > p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bTextBox > p > span {
+    font-weight: bolder;
+    background-color: rgb(228, 228, 228);
+}
+
+p.hiLogoText {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 30px;
+    font-family: 'Jeju Myeongjo', serif;
+    font-weight: bold;
+}
+.colors > img {
+    display: inline-block;
+    width: 12vw;
+    margin: 0 30px;
+}
+
+.detailText {
+    width: fit-content;
+    text-align: right;
+    position: absolute;
+    top: 163px; left: 141px;
+}
+.detailText > h4 {
+    margin-bottom: 12px;
+}
+
+.detailText2 {
+    width: fit-content;
+    text-align: left;
+    position: absolute;
+    bottom: 133px; right: 188px;
+}
+.detailText2 > h4 {
+    margin-bottom: 12px;
+}
+.detail1 > img.appImg {
+    cursor: zoom-in;
+}
+.detail1 > p.appText {
+    margin-top: 20px;
+}
+.detail1 > p.appText > span {
+    color: #999;
+}
+
+.imgPopup {
+    display: none;
+}
+.imgPopup > img {
+    display: block;
+    width: 45vw;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: zoom-out;
+}
+.popupBg {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.viewBox {
+    width: 375px;
+    height: 812px;
+}
+.viewFrame {
+    display: inline-block;
+}
+
+.keycolor > p {
+    width: fit-content;
+    text-align: left;
+    margin: 20px auto;
+}
+.footer {
+    width: 100%; height: 150px;
+    background: #000;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+.footer > p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 149px;
+}
+@media screen and (max-width:428px) {
+    * {
+        font-size: 18px;
+    }
+    #wrap {
+        width: 100%;
+    }
+    .header h2 {
+        font-size: 18px;
+    }
+    .cont {
+        width: 100%;
+        padding: 0 20px;
+        padding-top: 150px;
+    }
+    .mainLogo2 {
+        display: block;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    .mainLogo2 > img {
+        width: 40vw;
+    }
+    .detail1 > h3 {
+        top: -13px;
+    }
+    .detail2 > h3 {
+        top: -13px;
+    }
+    .detail1 > img.spacImg1 {
+        width: 85vw;
+    }
+    .detail1 > img.spacImg2 {
+        width: 7vw;
+        display: block;
+        margin: 50px auto;
+    }
+    .detail1 > img.spacImg3 {
+        width: 30vw;
+    }
+
+    .firstPart {
+        display: block;
+        text-align: center;
+    }
+    .firstPart > img {
+        display: inline-block;
+    }
+    .firstPart > p {
+        display: block;
+        margin: 0;
+    }
+    .part {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+    }
+    .part > img {
+        display: inline-block;
+    }
+    .part > p {
+        display: block;
+        margin: 0;
+    }
+
+    .belleDetailBox {
+        top: -10px;
+    }
+    .belleDetail {
+        height: fit-content;
+        margin-bottom: 60px;
+    }
+    .bImgBox {
+        display: block;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .bImgBox > img {
+        top: unset; left: unset;
+        transform: unset;
+        position: relative;
+        width: 40%;
+    }
+    .bTextBox {
+        display: block;
+        width: 80%;
+        text-align: center;
+        height: fit-content;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .bTextBox > p {
+        position: unset;
+        top: unset;
+        transform: unset;
+    }
+
+    .colors > img {
+        display: block;
+        width: 30vw;
+        margin: 0px auto;
+        margin-bottom: 30px;
+    }
+    .footer > p {
+        font-size: 16px;
+    }
+}
