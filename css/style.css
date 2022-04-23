@@ -131,6 +131,7 @@ img.logo {
 .profile-title {
     width: 100%;
     transform: translateY(-20px);
+    margin-bottom: 20px;
 }
 .profileTitle {
     font-size: 14px;
