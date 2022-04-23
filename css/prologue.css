@@ -91,6 +91,7 @@ li.half-list {
 
 
 /* mobile */
+/*
 @media screen and (max-width:428px) {
     .main {
         width: 100%;

@@ -284,6 +284,7 @@ p.hiLogoText {
     font-size: 12px;
     line-height: 149px;
 }
+/*
 @media screen and (max-width:428px) {
     * {
         font-size: 18px;
