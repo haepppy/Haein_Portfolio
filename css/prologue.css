@@ -29,9 +29,16 @@ a {
 .logo img {
     width: 40%;
 }
-
 li {
     margin-top: 16px;
+}
+li.half-list {
+    width: 48%;
+    display: inline-block;
+    margin-right: 2%;
+}
+li.half-list:last-child {
+    margin: 0;
 }
 .btn {
     width: 100%;
@@ -59,7 +66,6 @@ li {
     }
     
     .logo img {
-
         width: 20%;
     }
     ul {
@@ -69,6 +75,15 @@ li {
         transform: translate(-50%, 0);
     }
     li {
+        margin-top: 12px;
+    }
+    li.half-list {
+        margin-right: 0;
+        margin-top: 12px;
+        display: block;
+        width: 100%;
+    }
+    li.half-list:last-child {
         margin-top: 12px;
     }
     .btn {

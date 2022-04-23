@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Haein_Design_Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="../script/jquery-3.6.0.min.js"></script>
-    <script src="../script/common.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fullpage.css">
 </head>
 
 <body>
@@ -30,7 +29,7 @@
                     <div class="openMenu">
                         <img src="../images/openMenu.svg" alt="카테고리 열기">
                     </div>
-                    <div class="closeMenu">
+                    <div class="closeMenu hidden">
                         <img src="../images/closeMenu.svg" alt="카테고리 닫기">
                     </div>
                 </div>
@@ -66,10 +65,11 @@
             </div>
             <div class="section" id="profileTab">
                 <div class="section2">
-                    <div class="profileBox">
-                        <img class="proflieBg" src="../images/profile bg.png" alt="프로필 배경">
+                    <div class="profileBox"> 
                         <div class="profile">
-                            <h2>PROFILE</h2>
+                            <div class="profile-title">
+                                <img src="../images/profile-title.svg" alt="프로필 멘트 이미지">
+                            </div>
                             <div class="profileTitle">
                                 <p>Name</p>
                                 <p>Birthday</p>
@@ -77,15 +77,67 @@
                                 <p>E-Mail</p>
                                 <p>Keywords</p>
                                 <p>SNS</p>
-                                <p>Tools</p>
+                                <p>Skills</p>
                             </div>
                             <div class="profileCont">
                                 <p>권해인</p>
                                 <p>1997.08.21</p>
                                 <p>010 - 5660 - 9775</p>
                                 <p>godls2213@naver.com</p>
-                                <p>토론 . 논리 . 관찰 . 분석 . 상상</p>
-                                <p><span><a href="https://blog.naver.com/godls2213" target= "_blank">Blog</a></span> | <span><a href="https://www.instagram.com/_illl_lil/" target="_blank">Instagram</a></span></p>
+                                <p>논리 . 관찰 . 분석 . 상상</p>
+                                <p><span><a href="https://blog.naver.com/godls2213" target= "_blank">Naver Blog</a></span> | <span><a href="https://haepppy.github.io/" target="_blank">Git Blog</a></span></p>
+                                <div class="skills">
+                                    <div class="skill-group">
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-powerpoint.svg" alt="파워포인트 아이콘">
+                                            <p class="skill-name">Powerpoint</p>
+                                        </div>
+                                        
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-excel.svg" alt="엑셀 아이콘">
+                                            <p class="skill-name">Excel</p>
+                                        </div>
+
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-word.svg" alt="워드 아이콘">
+                                            <p class="skill-name">Word</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-ps.svg" alt="포토샵 아이콘">
+                                            <p class="skill-name">Adobe Photoshop</p>
+                                        </div>
+                                        
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-ai.svg" alt="일러스트레이터 아이콘">
+                                            <p class="skill-name">Adobe Illustrator</p>
+                                        </div>
+                                        
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-xd.svg" alt="엑스디 아이콘">
+                                            <p class="skill-name">Adobe XD</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-html.svg" alt="html 아이콘">
+                                            <p class="skill-name">HTML</p>
+                                        </div>
+
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-css.svg" alt="css 아이콘">
+                                            <p class="skill-name">CSS</p>
+                                        </div>
+
+                                        <div class="skill-icon">
+                                            <img src="../images/icon-js.svg" alt="js 아이콘">
+                                            <p class="skill-name">JS</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="toolsCont">-MS-<br>
                                     Powerpoint<br>
                                     Excel<br>
@@ -95,15 +147,14 @@
                                     Illustrator<br>
                                     Xd</p>
                                 <p class="toolsCont">-Others-<br>
-                                    Visual Studio Code<br>
-                                    Brackets</p>
+                                    HTML<br>
+                                    CSS<br>
+                                    JS<br>
+                                    Visual Studio Code</p>
                             </div>
-                            <div class="profileObject"></div>
+                            
                             <div class="profileImgBox">
-                                <img class="profileImg" src="../images/profile_photo.jpg" alt="프로필 사진">
-                                <p>디자인하는 스토리텔러,<br>
-                                    권해인입니다.
-                                </p>
+                                <img class="profileImg" src="../images/profile_photo.png" alt="프로필 사진">
                             </div>
                             
                         </div>    
@@ -114,17 +165,18 @@
             <div class="section" id="webDesignTab">
                 <div class="uidesignCtn">
                   <h2>UI DESIGNS</h2>
-                  <div class="flexBox">
+                  <div class="gridbox">
                       <div class="thumnail">
-                          <a href="../html/portfolio_detail.html">
+                          <a href="../html/cgp_detail.html">
                             <div class="hoverText">
-                                <p>포트폴리오 웹사이트<br>
-                                &lt;반응형&gt;  
+                                <p>의류 브랜드 리디자인<br>
+                                &lt;APP&gt;  
                                 </p>
                             </div>
-                            <img src="../images/thumnail1.png" alt="포트폴리오 웹사이트 썸네일">
+                            <img src="../images/cgp/cgp-main-img.jpg" alt="포트폴리오 웹사이트 썸네일">
                           </a>
                       </div>
+                      <!--
                       <div class="thumnail">
                         <a href="../html/postershop_webd.html">
                             <div class="hoverText">
@@ -132,7 +184,7 @@
                                 &lt;APP&gt;  
                                 </p>
                             </div>
-                            <img src="../images/half_poster_thumnail.png" alt="포스터샵 썸네일">
+                            <img src="../images/cgp/cgp-main-img.jpg" alt="포스터샵 썸네일">
                           </a>
                     </div>
                     <div class="thumnail">
@@ -142,9 +194,10 @@
                                 &lt;WEB&gt;  
                                 </p>
                             </div>
-                            <img src="../images/thumnail2.png" alt="미쏘 사이트 썸네일">
+                            <img src="../images/cgp/cgp-main-img.jpg" alt="미쏘 사이트 썸네일">
                           </a>
                     </div>
+                -->
                   </div>  
                 </div>
             </div>
@@ -156,16 +209,29 @@
                     <div class="circleBox">
                         <div class="circle">
                             <a href="../html/logotab.html">
-                                <h3>LOGO</h3>
-                                <img src="../images/firstlogo.png" alt="로고 대표이미지">
+                                <div class="circle-title">
+                                    <h3>logo</h3>
+                                </div>
+                                <img src="../images/logo-img.jpg" alt="로고 대표이미지">
                                 
                             </a>
                         </div>
                         
                         <div class="circle">
-                            <a href="../html/postertab.html">
-                                <h3>POSTER</h3>
-                                <img src="../images/posterimg.png" alt="포스터 대표이미지">
+                            <a href="../html/bannertab.html">
+                                <div class="circle-title">
+                                    <h3>banner</h3>
+                                </div>
+                                <img src="../images/banner-img.jpg" alt="그래픽 대표이미지">
+                            </a>
+                        </div>
+
+                        <div class="circle">
+                            <a href="../html/publishing.html">
+                                <div class="circle-title">
+                                    <h3>publishing</h3>
+                                </div>
+                                <img src="../images/publishing-img/chrome-black.jpg" alt="그래픽 대표이미지">
                             </a>
                         </div>
                     </div>
@@ -177,6 +243,10 @@
         </div>
 
     </div>
+
+    <script src="../script/jquery-3.6.0.min.js"></script>
+    <script src="../script/fullpage.js"></script>
+    <script src="../script/common.js"></script>
 </body>
 
 </html>

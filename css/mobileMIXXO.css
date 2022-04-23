@@ -1,6 +1,10 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 *{
+    font-family: 'Noto Sans KR', sans-serif;
    margin: 0; padding: 0; color: #252525;
    box-sizing: border-box; font-size: 14px;
+   list-style: none;
 }
 a {
     text-decoration: none;
@@ -14,6 +18,9 @@ span.pc {
 div.pc {
     background: #e87f24;
 }
+.bold {
+    font-weight: bold;
+}
 
 .verCenter {
     top: 50%;
@@ -23,6 +30,7 @@ div.pc {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .last:last-child {
     margin: 0;
 }
@@ -32,6 +40,7 @@ div.pc {
     width: 100%;
 }
 
+/* 헤더 높이 만큼 mainBanner margin-top 값 수정 */
 .header {
     width: 100%; height: 60px;
     padding: 0 20px;
@@ -40,10 +49,14 @@ div.pc {
     z-index: 15;
     background: #fff;
 }
-/* 헤더 높이 만큼 mainBanner margin-top 값 수정 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .header {
         padding: 0 24px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .header {
+        display: none;
     }
 }
 
@@ -60,6 +73,7 @@ div.pc {
     }
 }
 
+
 .leftIconBox {
     height: 60px;
     text-align: left;
@@ -75,11 +89,12 @@ div.pc {
     width: 32px; height: 32px;
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 }
 .icon {
     width: 32px; height: 32px;
 }
-.icon img {
+.iconArea img {
     display: block;
     width: 24px; height: 24px;
     position: relative;
@@ -108,11 +123,407 @@ div.pc {
     display: block;
 }
 
+.header_desktop, .iconPopup {
+    display: none;
+}
+
+
+
+/*popup window*/
+.categoryWin {
+    display: none;
+    width: 100%; height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 20;
+    padding: 30px 30px 100px;
+    position: relative;
+    background: #252525;
+    overflow-y: scroll;
+}
+.categoryWin::-webkit-scrollbar {
+    visibility: hidden;
+}
+.closeBtn {
+    width: 32px; height: 32px;
+    position: absolute;
+    top: 20px; right: 20px;
+    cursor: pointer;
+}
+.closeBtn img {
+    width: 24px; height: 24px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainTab {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.mainTab a {
+    color: #fff;
+    font-size: 16px;
+}
+.mainTab a.pc {
+    color: #e87f24;
+}
+.mainTab li {
+    height: fit-content;
+    line-height: 30px;
+    position: relative;
+}
+.mainTab li a {
+    height: 32px;
+}
+.mainTab .subMenuBox_inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.subMenuBox {
+    display: none;
+    margin-left: 20px;
+    padding-top: 0;
+}
+.subMenuBox > li {
+    padding: 0;
+    padding-bottom: 10px;
+}
+.tabBtn {
+    width: 32px; height: 32px;
+    position: absolute;
+    right: 0; top: 0;
+    cursor: pointer;
+}
+.tabBtn img {
+    width: 24px; height: 24px;
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.downBtn {
+    display: block;
+}
+.upBtn {
+    display: none;
+}
+
+.not_scroll {
+    position: fixed;
+    
+    width: 100%; height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .header_desktop {
+        width: 80%; height: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+    /* 상단내비 */
+    .linkText {
+        width: 100%; height: 50px;
+        position: relative;
+    }
+    .linkText > ul {
+        text-align: right;
+    }
+    .linkText > ul > li {
+        font-size: 11px;
+        line-height: 49px;
+        display: inline-block;
+        color: #999;
+    }
+    .linkText > ul > li > a {
+        font-size: 11px;
+        color: #999;
+    }
+
+    /* 상단 로고 영역 */
+    .topLogoArea {
+        width: 100%; height: 100px;
+        position: relative;
+    }
+    .topLogoArea > a {
+        width: 100%; height: 100px;
+        position: relative;
+        display: block;
+    }
+    .topLogoArea > a > img {
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* 내비게이션 */
+    .nav {
+        width: 100%; height: 50px;
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        text-align: left;
+        z-index: 10;
+    }
+    .nav > ul {
+        height: 50px;
+        line-height: 50px;
+        display: block;
+    }
+    .mainNav {
+        width: 92px; height: 50px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        text-align: center;
+        margin-right: 12px;
+    }
+    .navIcon {
+        display: inline-block;
+        position: absolute;
+        top: 0; right: 0;
+    }
+    .navIconArea {
+        width: 50px; height: 50px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .navIconArea img {
+        display: block;
+        position: relative;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* nav icon active popup */
+    .iconPopup {
+        width: 100%;
+        z-index: 15;
+        position: absolute;
+    }
+
+    /* 검색 활성화 팝업 */
+    .searchPopup {
+        display: none;
+        width: 100%; height: 100vh;
+        position: relative;
+        background: #fff;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+
+    .searClose {
+        width: 1280px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50px; left: 50%;
+        transform: translateX(-50%);
+        text-align: right;
+    }
+    .closeIcon {
+        width: 50px; height: 50px;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .closeIcon img {
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    .searCont {
+        width: fit-content;
+        text-align-last: left;
+        position: relative;
+        top: 0; left: 50%;
+        transform: translateX(-50%);
+    }
+    .searArea {
+        width: 632px;
+        height: 50px;
+        display: flex;
+        position: relative;
+    }
+    .searInput {
+        flex-basis: fill;
+        flex-grow: 1;
+        border: none;
+        border-bottom: 1px solid #252525;
+        padding-left: 20px;
+    }
+    .searInput:focus {
+        outline: none;
+    }
+    .searBtn {
+        flex-basis: 50px;
+        position: relative;
+        cursor: pointer;
+    }
+    .searBtn img {
+        display: block;
+        position: relative;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .textArea {
+        margin-top: 50px;
+        padding-left: 10px;
+        margin-right: 200px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .textArea h5 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    .poprCont, .poprCont > a {
+        font-size: 16px;
+        color: #999;
+        text-align: left;
+        line-height: 35px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    /* 카테고리 아이콘 활성화 */
+    .categoryWin {
+        display: none;
+        width: 100%; height: 100vh;
+        position: fixed;
+        top: 150px;
+        background: #252525;
+        text-align: center;
+        padding: 50px 10% 0;
+    }
+    .closeBtn {
+        position: absolute;
+        right: 10%;
+    }
+    .myP, .tabBtn {
+        display: none;
+    }
+
+    .categoryGrid {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+        position: relative;
+        top: 50px;
+    }
+
+    .mainTab:nth-child(1) {
+        display: none;
+    }
+    .mainTab:nth-child(2) {
+        grid-column: 1/3;
+    }
+    .mainTab:nth-child(3) {
+        grid-column: 1/3;
+    }
+    .mainTab:nth-child(4) {
+        grid-column: 3/9;
+        grid-row: 1/3;
+    }
+    .mainTab:nth-child(5) {
+        grid-column: 11/13;
+        grid-row: 1/3;
+    }
+
+
+    .mainTab:nth-child(4) > ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 24px;
+    }
+    .subMenuBox_inline {
+        display: block;
+    }
+    .subMenuBox {
+        display: block;
+        margin: 0;
+    }
+    ul.subMenuBox li a {
+        font-size: 14px;
+    }
+
+    .mainTab:nth-child(5) > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+        grid: wrap
+    }
+
+
+    
+    .subUl {
+        grid-column: 11;
+    }
+
+    .mainTab:first-child  li {
+        text-align-last: left;
+        margin-bottom: 16px;
+    }
+    .mainTab  ul  li {
+        text-align: left; 
+    }
+    .mainTab  li  a {
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    
+    .subT {
+        font-size: 16px;
+        color: #fff;
+    }
+    .pointT {
+        color: #E87F24;
+        font-size: 16px;
+        line-height: 0;
+    }
+    /* 서브 메뉴 */
+    .subNav {
+        display: none;
+        background: #fff;
+    }
+}
+
+
+
+
+
+
+/*banner*/
+img.desktopBannerImg {
+    display: none;
+}
+@media screen and (min-width: 769px) {
+    img.desktopBannerImg {
+        width: 100%;
+        display: block;
+    }
+}
 .swiper-container {
     width: 100vw; height: 111vw;
     overflow: hidden;
     position: relative;
     margin-top: 60px;
+}
+@media screen and (min-width: 769px) {
+    .swiper-container {
+        width: 100%; height: fit-content;
+        margin-top: 0;
+    }
 }
 .swiper-wrapper {
     width: 300vw;
@@ -127,10 +538,17 @@ div.pc {
     width: 100%;
     display: block;
 }
-.swiper-slide a img {
+.swiper-slide a img.mobileBannerImg {
     width: 100%;
     display: block;
 }
+@media screen and (min-width: 769px) {
+    .swiper-slide a img.mobileBannerImg {
+        display: none;
+    }
+}
+
+
 
 .bannerItem {
     width: 100%; height: 50px;
@@ -183,13 +601,23 @@ span.swiper-pagination-bullet-active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .container {
         grid-template-columns: repeat(8, 1fr);
         column-gap: 16px;
         padding: 0 24px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+        padding: 0;
+        margin: 0 auto 100px;
     }
 }
 .itemTitle {
@@ -202,6 +630,13 @@ span.swiper-pagination-bullet-active {
         grid-column: span 8;
     }
 }
+@media screen and (min-width: 769px) {
+    .itemTitle {
+        grid-column: span 12;
+        padding: 100px 0 50px;
+    }
+}
+
 .itemTitle h5 {
     font-size: 20px;
     font-weight: normal;
@@ -210,9 +645,20 @@ span.swiper-pagination-bullet-active {
     margin-bottom: 16px;
     grid-column: span 2;
 }
+@media screen and (min-width: 769px) {
+    .item {
+        margin-bottom: 30px;
+        grid-column: span 3;
+    }
+}
 .thunmnail {
     width: 100%;
     position: relative;
+}
+@media screen and (min-width: 769px) {
+    .thunmnail a:hover img {
+        filter: brightness(70%);
+    }
 }
 .itemPhoto img {
     width: 100%;
@@ -234,24 +680,40 @@ span.wishIcon {
     width: 100%;
     margin-top: 6px;
 }
+@media screen and (min-width: 769px) {
+    .prodTextArea {
+        margin-top: 10px;
+    }
+}
 .prodTextArea a {
     width: 100%;
     display: block;
     text-align: left;
+}
+@media screen and (min-width: 769px) {
+    .prodTextArea a {
+        font-size: 16px;
+    }
 }
 a.modelNum {
     font-size: 12px;
     color: #999;
     margin-bottom: 2px;
 }
-a.prodName {
-
+@media screen and (min-width: 769px) {
+    a.modelNum {
+        font-size: 14px;
+    }
 }
 a.price {
+    position: relative;
     font-weight: bold;
     margin-top: 6px;
 }
-span.priceInfo {
+@media screen and (min-width: 769px) {
+    a.price {
+        font-size: 16px;
+    }
 }
 .beforePri {
     font-size: 12px;
@@ -260,11 +722,31 @@ span.priceInfo {
     margin-left: 4px;
     font-weight: normal;
 }
+@media screen and (min-width: 769px) {
+    .beforePri {
+        font-size: 14px;
+    }
+}
 .salePri {
     margin-left: 4px;
 }
+@media screen and (min-width: 769px) {
+    .salePri {
+        font-size: 16px;
+    }
+}
 .reviewCount {
     display: none;
+}
+@media screen and (min-width: 1200px) {
+    .reviewCount {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        color: #999;
+        font-weight: normal;
+        vertical-align: bottom;
+    }
 }
 
 .moreBtn {
@@ -274,12 +756,20 @@ span.priceInfo {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
+.moreBtn:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15) inset;
+}
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .moreBtn {
         grid-column: 4/6;
     }
 }
-.moreBtn > p {
+@media screen and (min-width: 769px) {
+    .moreBtn {
+        grid-column: 6/8;
+    }
+}
+.moreBtn p {
     font-size: 16px;
     color: #999;
     text-align: center;
@@ -289,39 +779,87 @@ span.priceInfo {
 }
 
 
-.lineBanner {
+.lineBannerArea {
     width: 100%; height: 100px;
-    background: coral;
+    position: relative;
+}
+@media screen and (min-width: 769px) {
+    .lineBannerArea {
+        height: 120px;
+    }
+}
+.lineBanner img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.lineBanner {
+    width: 100%; height: 100%;
+    position: relative;
+}
+.bannerBg {
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+.bg {
+    width: 50%; height: 100%;
+    float: left;
 }
 
-.horScrollLIst {
+.horScrollList {
     width: 100%;
+    margin-bottom: 50px;
+}
+@media screen and (min-width: 769px) {
+    .horScrollList {
+        margin-bottom: 100px;
+    }
 }
 
 .listTitle {
     width: 100%;
-    padding: 50px 20px 12px;
+    padding: 0 20px 12px;
     text-align: left;
 }
+@media screen and (min-width: 769px) {
+    .listTitle {
+        padding: 0 10% 30px;
+    }
+}
 .listTitle h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
 }
 
-.horScrollLIst .scrollList {
+.horScrollList .scrollList {
     width: 100%;
     overflow-x: scroll;
 }
-.horScrollLIst .scrollList .itemList {
+@media screen and (min-width: 769px) {
+    .horScrollList .scrollList {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+.horScrollList .scrollList .itemList {
     width: fit-content;
     display: flex;
     gap: 12px;
     padding: 0 20px;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .horScrollLIst .scrollList .itemList {
+    .horScrollList .scrollList .itemList {
         gap: 16px;
         padding: 0 24px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .horScrollList .scrollList .itemList {
+        gap: 24px;
+        padding: 0;
     }
 }
 .itemList .item {
@@ -332,6 +870,12 @@ span.priceInfo {
         width: 150px;
     }
 }
+@media screen and (min-width: 769px) {
+    .itemList .item {
+        width: unset;
+        flex: 1;
+    }
+}
 .itemList .prodTextArea a {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -339,8 +883,76 @@ span.priceInfo {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+
+.itemList .prodTextArea .priceInfo {
+    display: block;
+    width: 100%;
+}
+@media screen and (min-width: 769px) {
+    .itemList .prodTextArea .priceInfo {
+        display: inline-block;
+        width: unset;
+    }
+}
 .itemList .prodTextArea .beforePri {
     margin: 0;
+}
+
+.subBannerArea {
+    width: 100%;
+    padding: 0 20px;
+    background: #e6cdb5;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .subBannerArea {
+        padding: 0 24px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .subBannerArea {
+        padding: 0 10%;
+    }
+}
+
+.subBanner {
+    width: 100%;
+    position: relative;
+}
+.subBannerTitle {
+    width: 100%;
+    padding: 0 20px 30px;
+}
+@media screen and (min-width: 481px) {
+    .subBannerTitle {
+        width: 360px;
+        margin: 0 auto;
+        padding: 0 0 30px;
+    }
+}
+
+.objArea {
+    width: 100%; 
+}
+@media screen and (min-width: 481px) {
+    .objArea {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+.subBannerObj {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .subBannerObj {
+        width: 45%;
+    }
+}
+@media screen and (min-width: 769px) {
+    .subBannerObj {
+        width: 40%;
+    }
 }
 
 

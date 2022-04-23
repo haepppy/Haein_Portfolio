@@ -1,0 +1,357 @@
+* {
+    margin: 0; padding: 0;
+    color: #252525; list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.not_scroll {
+    position: fixed;
+    width: 100%; height: 100%;
+}
+
+/* layout */
+#wrap {
+    width: 100%;
+}
+.header {
+    width: 100%; height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 15;
+    background: #fff;
+}
+.section {
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+.firstSection {
+    margin-top: 60px;
+}
+.bottomBar {
+    display: flex;
+    gap: 12px;
+    width: 100%; height: 60px;
+    padding: 6px 20px;
+    position: fixed;
+    bottom: 0; left: 0;
+    background: #fff;
+    overflow: visible;
+    z-index: 5;
+}
+
+/* haeder */
+.headerGrid {
+    width: 100%; height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+}
+.leftIconBox {
+    height: 60px;
+    text-align: left;
+    line-height: 57px;
+}
+.rightIconBox {
+    height: 60px;
+    text-align: right;
+    line-height: 57px;
+    
+}
+.iconArea {
+    width: 32px; height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.icon {
+    width: 32px; height: 32px;
+}
+.iconArea img {
+    display: block;
+    width: 24px; height: 24px;
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logoArea {
+    height: 60px;
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* section1 */
+
+/* nav link */
+.navLink {
+    height: 32px;
+    line-height: 33px;
+    margin-bottom: 12px;
+}
+.navLink p {
+    color: #999;
+    font-size: 14px;
+}
+.navLink p a {
+    color: #999;
+}
+
+/* main photo */
+.mainPhotoArea {
+    width: 100%;
+    background: #ccc;
+    margin-bottom: 12px;
+    position: relative;
+}
+.mainPhotoArea:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+.photoPointer {
+    display: block;
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+}
+.photoPointer ul li {
+    width: 32px; height: 32px;
+    position: relative;
+    display: inline-block;
+}
+.pointer {
+    width: 8px; height: 8px;
+    border-radius: 100%;
+    background: #fff;
+    opacity: 0.6;
+    z-index: 5;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.onPointer {
+    opacity: 1.0;
+}
+
+/* text area */
+.textArea {
+    width: 100%;
+}
+.modelNum {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.itemName {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.mainPrice {
+    font-size: 20px;
+    font-weight: bold;
+}
+.beforePrice {
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+.salePri {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e87f24;
+    margin-left: 6px;
+}
+
+/* section2 */
+.test {
+    width: 100%; height: 300px;
+    background: #000;
+    margin-bottom: 80px;
+    border-radius: 20px;
+}
+
+/* bottom bar */
+.bottomBar div {
+    cursor: pointer;
+}
+.likeBtn {
+    width: 48px; height: 48px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    background: #252525;
+    position: relative;
+}
+.likeBtn img {
+    width: 32px; height: 32px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wishOff {
+    display: block;
+}
+.wishOn {
+    display: none;
+}
+.cartBtn {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    background: #252525;
+    flex-grow: 1;
+    height: 48px;
+    border-radius: 10px;
+}
+.buyBtn {
+    display: inline-block;
+    color: #252525;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    background: #e87f24;
+    flex-grow: 2;
+    height: 48px;
+    border-radius: 10px;
+}
+
+/* 하단 팝업창 */
+.bottomPopup {
+    display: none;
+    width: 100%; height: 300px;
+    background: #fff;
+    position: fixed;
+    bottom: -190px; left: 0;
+    padding: 50px 20px 120px;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+.popupScrollBox {
+    width: 100%; height: 250px;
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 0px 20px 120px;
+    overflow-y: scroll;
+}
+.optionBottom {
+    display: block;
+    width: 100%; height: 100px;
+    padding: 6px 20px;
+    position: fixed;
+    bottom: 0; left: 0;
+    background: #fff;
+}
+.priceValue {
+    display: block;
+    width: 100%; height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+.priceValue span {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.bottomBtnBox {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+.bottomOff {
+    display: none;
+    width: 100vw; height: 100vh;
+    background:rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.optionArea {}
+.optionBox {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.optionBox p {
+    display: inline-block;
+    padding-right: 20px;
+}
+.optionList {
+    display: inline-block;
+}
+.option {
+    display: inline-block;
+    border: 1px #252525 solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.optionOn {
+    display: inline-block;
+    background: #252525;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 12px;
+}
+.soldOut {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 12px;
+    border: 1px solid #999;
+    background: #ccc;
+    color: #999;
+}
+.checkArea {
+    width: 100%;
+    border-top: 1px #ccc solid;
+    margin-top: 16px;
+    padding-top: 24px;
+}
+.checkBox {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px #999 solid;
+    border-radius: 10px;
+    position: relative;
+}
+.optionCont {
+    font-size: 14px;
+}
+.optionPrice {
+    display: block;
+    position: absolute;
+    bottom: 10px; right: 20px;
+}
+
+.optionCount {
+    margin-top: 10px;
+}
+.removeBtn, .addBtn {
+    display: inline-block;
+    width: 24px; height: 24px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+}
+.countBox {
+    width: 50px; height: 24px;
+}
+.countBox::placeholder {
+    color: #252525;
+    font-size: 14px;
+    text-align: center;
+}
+

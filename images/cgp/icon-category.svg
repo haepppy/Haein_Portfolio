@@ -1,0 +1,19 @@
+<svg id="레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d2d;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="그룹_40" data-name="그룹 40">
+    <rect id="사각형_93" data-name="사각형 93" class="cls-1" width="20" height="2" transform="translate(2 4)"/>
+    <rect id="사각형_94" data-name="사각형 94" class="cls-1" width="20" height="2" transform="translate(2 11)"/>
+    <rect id="사각형_95" data-name="사각형 95" class="cls-1" width="20" height="2" transform="translate(2 18)"/>
+  </g>
+  <rect id="사각형_96" data-name="사각형 96" class="cls-2" width="24" height="24"/>
+</svg>

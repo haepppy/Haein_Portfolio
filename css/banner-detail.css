@@ -1,0 +1,119 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    display: block;
+}
+
+#wrap {
+    width: 80vw; height: 100vh;
+    max-width: 1280px;
+    margin: 100px auto 0;
+}
+header {
+    width: 100%; height: 50px;
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+}
+header h2 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: normal;
+}
+.sub-title {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: fit-content;
+    padding: 2px 20px;
+    border-bottom: 4px solid #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+.preview-title {
+    width: fit-content;
+    padding: 2px 20px;
+    border-bottom: 4px solid #000;
+}
+.grid-box {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 2fr 4fr;
+}
+.img-width {
+    width: 100%;
+}
+.img-height {
+    height: 100%;
+}
+.main_banner_area {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.line_banner_area {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.sq_banner_area {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/2;
+    grid-row: 3/4;
+    gap: 2px;
+}
+.detail_banner_area {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border-left: 2px solid #ccc;
+}
+.img-bg {
+    width: 100%; height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+section > div {
+    margin-bottom: 50px;
+}
+.section__cont img {
+    cursor: zoom-in;
+}
+.default-banner {
+    display: flex;
+    width: 100%; height: calc((80vw - 32px)/3);
+    gap: 16px;
+}
+.default-banner .img-area {
+    position: relative;
+    width: 100%; height: 100%;
+    flex: 1 1 auto;
+}
+.img-area img {
+    width: 100%;
+}
+
+.img-width {
+    width: 100%;
+}

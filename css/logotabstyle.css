@@ -6,7 +6,9 @@
     box-sizing: border-box;
     color: #000;
     font-family: 'Noto Sans KR', sans-serif;
-
+}
+a {
+    text-decoration: none;
 }
 
 html {
@@ -17,6 +19,11 @@ body {
 }
 body::-webkit-scrollbar {
     display: none;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
 }
 
 

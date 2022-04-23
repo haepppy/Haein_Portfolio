@@ -1,0 +1,15 @@
+<svg id="레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d2d;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="패스_1" data-name="패스 1" class="cls-1" d="M16,8V6A4,4,0,0,0,8,6V8H4V22H20V8ZM10,6a2,2,0,0,1,4,0V8H10Zm8,14H6V10H18Z"/>
+  <rect id="사각형_87" data-name="사각형 87" class="cls-2" width="24" height="24"/>
+</svg>
