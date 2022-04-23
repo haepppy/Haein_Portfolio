@@ -249,7 +249,7 @@ function scroll() {
 };
 
 scroll();
-
+/*
 const openMenu = document.querySelector("div.openMenu");
 const closeMenu = document.querySelector("div.closeMenu");
 
@@ -264,4 +264,4 @@ closeMenu.addEventListener("click", function() {
     closeMenu.classList.add(CLASS_HIDDEN);
     openMenu.classList.remove(CLASS_HIDDEN);
 });
-
+*/
